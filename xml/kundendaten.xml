@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newuser
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="kundendaten.xsd"
+>
+    <email>KonstanzeFaust@gmail.com</email>
+    <confirmemail>KonstanzeFaust@gmail.com</confirmemail>
+    <password>2Fight4Gondor</password>
+    <confirmpassword>2Fight4Gondor</confirmpassword>
+
+    <name>Konstanze Faust</name>
+    <telefon>0177/5554840</telefon>
+    <strassenummer>Garak-der-Schneider-Straße 22</strassenummer>
+    <plz>55555</plz>
+    <ort>San Francisco</ort>
+    <land>USA</land>
+    <heimatwelt>Erde</heimatwelt>
+    <heimatwelttext>Erde</heimatwelttext>
+
+    <Geschlecht>female</Geschlecht>
+
+    <xydatum>2301-10-15</xydatum>
+    <geburtstagtag>15</geburtstagtag>
+    <geburtstagmonat>October</geburtstagmonat>
+    <geburtstagjahr>2301</geburtstagjahr>
+
+    <agb>1</agb>
+    <terms>0</terms>
+    <newsletter>1</newsletter>
+
+    <!-- Beispiel Attribute:
+    <kunde name="Faust" email="konstanzefaust@gmail.com"/>
+
+    Attribute => eher Metadaten
+    Elemente => Harte Daten-->
+
+</newuser>
+
+
