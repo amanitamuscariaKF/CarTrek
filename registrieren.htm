@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Trek - Registrieren</title>
+    <meta name="author" content="Konstanze Faust">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    
+</head>
+
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+
+
+
+<nav class="hauptmenue" id="dropdown">
+    <ul> 
+            
+        <li>
+            <a href="index.htm"><img src="img/menu_s.gif" alt="Home"  class="button"></a>
+        </li>
+
+
+        </ul>
+            <div class="dropdown-content">
+                <ul>
+
+                    <li>
+                        <a href="index.htm"><img src="img/menuhome_s.gif" alt="Home"  class="button"></a>
+                    </li>
+                <li>
+                    <a href="sogehts.htm"><img src="img/menusogehts_s.gif" alt="So geht's" class="button"></a>
+                </li>
+                <li>
+                    <a href="preise.htm"><img src="img/menupreise_s.gif" alt="Preise" class="button"></a>
+                </li>
+                <li>
+                    <a href="ourshuttles.htm"><img src="img/menubuchen_s.gif" alt="Buchen"  class="button"></a>
+                </li>
+                <li>
+                    <a href="registrieren.htm"><img src="img/menuregistrieren_s.gif" alt="Registrieren"  class="button"></a>
+                </li>
+                <li>
+                    <a href="login.htm"><img src="img/menulogin_s.gif" alt="Login" width="200" class="button"></a>
+                </li>
+                <li>
+                    <a href="testseite.htm"><img src="img/menutestseite_s.gif" alt="Testseite" width="200" class="button"></a>
+                </li> 
+            </ul>
+            </div>                   
+
+        
+    
+</nav>
+<main>
+
+        <header>
+            <figure><img src="img/cartrek.svg" alt="" style="width: 12rem;" ></figure>
+            <p>
+                Ihr mobiler Shuttleservice!
+            </p>
+        </header>
+
+
+              <section>
+            
+                <!-- <form action="registrierendanke.htm" method="POST"> -->
+                  <form action="data/index.php" method="POST">
+                    <h1>Registrieren Sie sich</h1>
+                    <fieldset>
+                      <legend>
+                        <h3>Benutzerdetails</h3>
+                      </legend>
+                      <div  class="account-details">
+                        <div><label>Emailadresse*</label><input type="text" name="email" required></div>
+                        <div><label>E-Mailadresse wiederholen*</label><input type="text" name="confirmemail" required></div>
+                        <div><label>Passwort*</label><input type="password" name="password" required>Bitte mindestens 9-stelliges Passwort eingeben</div>
+                        <div><label>Passwort wiederholen*</label><input type="password" name="confirmpassword" required></div>
+                      
+                        
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <legend>
+                        <h3>Persönliche Details</h3>
+                      </legend>
+                      <div  class="personal-details">
+                        <div>
+                          <div><label>Name*</label><input type="text" name="name" required></div>
+                          <div><label>Telefonnummer*</label><input type="text" name="telefon" required></div>
+                          <div><label>Straße + Hausnummer*</label><input type="text" name="strassenummer"></div>
+                          <div><label>PLZ*</label><input type="text" name="plz" required></div>
+                          <div><label>Ort*</label><input type="text" name="ort" required></div>
+                          <div><label>Land*</label><input type="text" name="land" required></div>
+                          <div>
+                            <label>Heimatwelt*</label>  
+                            <fieldset>
+                             
+                              <input type="radio" id="Erde" name="heimatwelt" value="Erde" ><label for="Erde">Erde</label>
+                              <input type="radio" id="Bajor" name="heimatwelt" value="Bajor"><label for="Bajor">Bajor</label>
+                              <input type="radio" id="Cardassia" name="heimatwelt" value="Cardassia"><label for="Cardassia">Cardassia</label>
+                              <input type="radio" id="Ferenginar" name="heimatwelt" value="Ferenginar"><label for="Ferenginar">Ferenginar</label>
+                              <input type="radio" id="Romulus" name="heimatwelt" value="Romulus"><label for="Romulus">Romulus</label>
+                              <input type="radio" id="Vulkan" name="heimatwelt" value="Vulkan"><label for="Vulkan">Vulkan</label>
+                              <input type="radio" name="heimatwelt" id="andere" value="andere"><label for="andere">Andere</label>
+
+                                <label></label><input type="text" name="heimatwelttext">
+                            </fieldset>
+                             
+
+                           
+                          </div>
+                        </div>
+                          
+                        <div>
+                          <div>
+                            <label>Geschlecht*</label>
+                            <div class="gender">
+                              <input type="radio" value="male" id="male" name="geschlecht"/>
+                              <label for="male" class="radio">Männlich</label>
+                              <input type="radio" value="female" id="female" name="geschlecht"/>
+                              <label for="female" class="radio">Weiblich</label>
+                              <input type="radio" value="other" id="other" name="geschlecht"/>
+                              <label for="other" class="radio">Andere</label>
+                            </div>
+                          </div>
+                          <div class="birthdate">
+                            <label>Geburtsdatum*</label>
+                            <!-- <input type="text" name="birthdate" required> -->
+                            <div class="bdate-block">
+                              <select name="geburtstagtag" id="tag" required>
+                                <option value="">Tag</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                              </select>
+                              <select name="geburtstagmonat" id="monat" required>
+                                <option value="">Monat</option>
+                                <option value="January">Januar</option>
+                                <option value="February">Februar</option>
+                                <option value="March">März</option>
+                                <option value="April">April</option>
+                                <option value="May">Mai</option>
+                                <option value="June">Juni</option>
+                                <option value="July">Juli</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">Oktober</option>
+                                <option value="November">November</option>
+                                <option value="December">Dezember</option>
+                              </select>
+                              <select name="geburtstagjahr" id="jahr" required>
+                                <option value="">Jahr</option>
+                                <option value="2301">2301</option>
+                                <option value="2302">2302</option>
+                                <option value="2303">2303</option>
+                                <option value="2304">2304</option>
+                                <option value="2305">2305</option>
+                                <option value="2306">2306</option>
+                                <option value="2307">2307</option>
+                                <option value="2308">2308</option>
+                                <option value="2309">2309</option>
+                                <option value="2310">2310</option>
+                                <option value="2311">2311</option>
+                                <option value="2312">2312</option>
+                                <option value="2313">2313</option>
+                                <option value="2314">2314</option>
+                                <option value="2315">2315</option>
+                                <option value="2316">2316</option>
+                                <option value="2317">2317</option>
+                                <option value="2318">2318</option>
+                                <option value="2319">2319</option>
+                                <option value="2320">2320</option>
+                                <option value="2321">2321</option>
+                                <option value="2322">2322</option>
+                                <option value="2323">2323</option>
+                                <option value="2324">2324</option>
+                                <option value="2325">2325</option>
+                                <option value="2326">2326</option>
+                                <option value="2327">2327</option>
+                                <option value="2328">2328</option>
+                                <option value="2329">2329</option>
+                                <option value="2330">2330</option>
+                                <option value="2331">2331</option>
+                              </select>
+
+                             
+                            </div>
+                          </div>
+                         
+                
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset>
+                      <legend>
+                        <h3>AGBs/Gesetzlicher Rahmen/Newsletter</h3>
+                      </legend>
+                      <div class="terms">
+                        <div class="checkbox">
+                          <input type="checkbox" name="agb"><span>Ich akzeptiere die <a href="http://www.positroenchen.de/erwerbsregeln.html">AGBs.</a></span>
+                        </div>
+                      <div class="terms-mailing">
+                        <div class="checkbox">
+                          <input type="checkbox" name="terms"><span>Ich akzeptiere die <a href="https://scifi.media/star-trek/starfleet-rules-and-regulations/">allgemeinen Regeln der Sternenflotte zur Interaktion mit fremden Spezies.</a></span>
+                        </div>
+                        <div class="checkbox">
+                          <input type="checkbox" name="newsletter"><span>Ich möchte über Neuigkeiten zu "Car Trek" informiert werden.</span>
+                        </div>
+                        </div>
+                        </div>
+                    </fieldset>
+
+                    
+                       
+                          <input type="submit" > 
+
+
+                        
+                        <!-- formaction="registrierendanke.htm" -->
+                   
+                  </form>
+                  <p>*Eingabe erforderlich</p>
+
+                </section>
+
+           
+        
+
+                <aside id="asiderechts"> <figure>
+                  <img src="img/GulDukat.jpg" alt="" class="review">
+                      <figcaption><b>Exzellent! </b>
+                          
+                          <br>
+                              - Gul Dukat
+                          </figcaption>
+                  </figure>
+                            
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>In der Vergangenheit hätte ich mir nie vorstellen können, dass mir die Sternenflotte einmal so zu Diensten sein könnte - 
+                  ein fabelhaftes kleines Schiff. Nur ist die charmante Major Kira als Mitpiloten mir leider nicht ansatzweise so angetan wie ich ihr. Nun - was soll man machen - 
+                  ich respektiere den Major zu sehr, um etwas zu versuchen. 
+                  Ein unterhaltsamer und äußerst komfortabler Flug war es trotzdem. 
+              </p></aside>
+    
+    
+    
+    </main>
+
+<footer>
+    <div data-video="nQWW6ikPUq0"
+data-autoplay="1"
+data-loop="1"
+id="youtube-audio">Sound an/aus
+</div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+    <nav>
+        <ul>
+            <li>Fragen/FAQ</li>
+            <li>AGB</li>
+            <li>Datenschutz</li>
+            <li>Impressum</li>
+        </ul>
+    </nav>
+    &#169; by Konstanze Faust. 
+</footer>
+</html>
+
