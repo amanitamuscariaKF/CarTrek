@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="de">
+		Kundendaten Spezifikationen
+		</xs:documentation>
+	</xs:annotation>
+
+<xs:element name="newuser"></xs:element>
+<xs:complexType name="newuser">
+	<xs:sequence>
+		<!-- <xs:element ref="email"></xs:element> -->
+		<xs:element name="email">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+							<xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z\.])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+					</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+
+
+<xs:element name="confirmemail">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+							<xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z\.])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+					</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="password">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9]{9,50}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="confirmpassword">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9]{9,50}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="name">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\S][A-Za-zäöÜÄÖÜ\c ]"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="telefon">
+	
+</xs:element>
+<xs:element name="strassenummer">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z\s0-9]+"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="plz">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{5,10}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="ort">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z\s\-/]+"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="land">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z\-]+"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="heimatwelt">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Erde"/>
+			<xs:enumeration value="Bajor"/>
+			<xs:enumeration value="Cardassia"/>
+			<xs:enumeration value="Ferenginar"/>
+			<xs:enumeration value="Romulus"/>
+			<xs:enumeration value="Vulkan"/>
+			<xs:enumeration value="andere"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="heimatwelttext">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\w\s\-/ÄÖÜäöü]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="Geschlecht">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="male"/>
+			<xs:enumeration value="female"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+
+<xs:element name="xydatum">
+	<xs:simpleType>
+		<xs:restriction base="xs:date">
+			<xs:maxInclusive value="2300-01-01"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+
+<xs:element name="geburstagtag">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01"/>
+			<xs:enumeration value="02"/>
+			<xs:enumeration value="03"/>
+			<xs:enumeration value="04"/>
+			<xs:enumeration value="05"/>
+			<xs:enumeration value="06"/>
+			<xs:enumeration value="07"/>
+			<xs:enumeration value="08"/>
+			<xs:enumeration value="09"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="19"/>
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="21"/>
+			<xs:enumeration value="22"/>
+			<xs:enumeration value="23"/>
+			<xs:enumeration value="24"/>
+			<xs:enumeration value="25"/>
+			<xs:enumeration value="26"/>
+			<xs:enumeration value="27"/>
+			<xs:enumeration value="28"/>
+			<xs:enumeration value="29"/>
+			<xs:enumeration value="30"/>
+			<xs:enumeration value="31"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="geburstagmonat">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="January"/>
+			<xs:enumeration value="February"/>
+			<xs:enumeration value="March"/>
+			<xs:enumeration value="May"/>
+			<xs:enumeration value="June"/>
+			<xs:enumeration value="July"/>
+			<xs:enumeration value="August"/>
+			<xs:enumeration value="September"/>
+			<xs:enumeration value="October"/>
+			<xs:enumeration value="November"/>
+			<xs:enumeration value="December"/>
+			</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="geburstagjahr">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2301"/>
+			<xs:enumeration value="2302"/>
+			<xs:enumeration value="2303"/>
+			<xs:enumeration value="2304"/>
+			<xs:enumeration value="2305"/>
+			<xs:enumeration value="2306"/>
+			<xs:enumeration value="2307"/>
+			<xs:enumeration value="2308"/>
+			<xs:enumeration value="2309"/>
+			<xs:enumeration value="2310"/>
+			<xs:enumeration value="2311"/>
+			<xs:enumeration value="2312"/>
+			<xs:enumeration value="2313"/>
+			<xs:enumeration value="2314"/>
+			<xs:enumeration value="2315"/>
+			<xs:enumeration value="2316"/>
+			<xs:enumeration value="2317"/>
+			<xs:enumeration value="2318"/>
+			<xs:enumeration value="2319"/>
+			<xs:enumeration value="2320"/>
+			<xs:enumeration value="2321"/>
+			<xs:enumeration value="2322"/>
+			<xs:enumeration value="2323"/>
+			<xs:enumeration value="2324"/>
+			<xs:enumeration value="2325"/>
+			<xs:enumeration value="2326"/>
+			<xs:enumeration value="2327"/>
+			<xs:enumeration value="2328"/>
+			<xs:enumeration value="2329"/>
+			<xs:enumeration value="2330"/>
+			<xs:enumeration value="2331"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+
+<xs:element name="agb" type="xs:boolean"/>
+<xs:element name="terms" type="xs:boolean"/>
+<xs:element name="newsletter" type="xs:boolean"/>
+
+	<!-- <xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="0"/>
+			<xs:maxExclusive value="1"/>			
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="terms">
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="0"/>
+			<xs:maxExclusive value="1"/>			
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="newsletter">
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="0"/>
+			<xs:maxExclusive value="1"/>			
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element> -->
+	</xs:sequence>
+</xs:complexType>
+
+</xs:schema>
